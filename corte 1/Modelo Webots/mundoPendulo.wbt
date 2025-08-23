@@ -9,8 +9,8 @@ WorldInfo {
   basicTimeStep 16
 }
 Viewpoint {
-  orientation -0.07555985702302945 -0.0625964383746015 -0.9951745544925643 1.762086451678722
-  position -0.037254660989883254 3.8380674317215977 -0.049476849799256144
+  orientation 0.1386211257253888 0.33986488009965554 -0.9302021537157784 0.8267722213932307
+  position -1.122836743488534 1.007843903607551 0.854237392377147
   description "Vista principal"
 }
 TexturedBackground {
@@ -70,7 +70,7 @@ Robot {
   children [
     SliderJoint {
       jointParameters JointParameters {
-        position 0.10662480812308975
+        position 0.10668372019704331
         axis 1 0 0
       }
       device [
@@ -83,7 +83,7 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation 0.10662480812308975 0.075 0
+        translation 0.10668372019704331 0.075 0
         children [
           Shape {
             appearance PBRAppearance {
@@ -96,7 +96,7 @@ Robot {
           }
           HingeJoint {
             jointParameters HingeJointParameters {
-              position 0.16774675451257598
+              position 0.17494876154451416
               axis 0 0 1
               anchor 0 0.025 0
             }
@@ -110,7 +110,7 @@ Robot {
             ]
             endPoint Solid {
               translation 0 0.025 0
-              rotation 0 0 1 0.1677467545125755
+              rotation 0 0 1 0.17494876154451477
               children [
                 Pose {
                   translation 0 0.6 0
@@ -172,8 +172,8 @@ Robot {
                   0 0.6 0
                 ]
               }
-              linearVelocity -6.0307102044276915e-05 2.3570577171454944e-05 3.983910710587679e-07
-              angularVelocity -1.5582140498823306e-08 7.729192211070192e-08 -0.0002351239850275098
+              linearVelocity -0.00015896309894193405 0.0010155120963662501 0.00027421233699764146
+              angularVelocity 0.0004983373336828229 6.324071280756269e-05 -3.2295589636237834e-05
             }
           }
         ]
@@ -185,8 +185,8 @@ Robot {
           density -1
           mass 2
         }
-        linearVelocity -0.0001993804872701344 1.836524132288826e-08 4.088052106979258e-07
-        angularVelocity 2.790483953143143e-07 -1.7001358042952114e-06 -6.858567219357253e-09
+        linearVelocity -0.00010064680565415075 0.0005082572949149835 -1.6543251281262885e-05
+        angularVelocity 0.0002489586045146389 3.133887156356514e-05 1.9349642234209923e-06
       }
     }
   ]
