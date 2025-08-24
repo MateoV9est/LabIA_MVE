@@ -214,5 +214,5 @@ Robot {
   ]
   name "pendulo_robot"
   contactMaterial "carro_material"
-  controller "pendulo_controller_2"
+  controller "pendulo_controller_final"
 }
