@@ -12,7 +12,7 @@ Viewpoint {
   position 1.920558517958081 -6.030554416062278 0.8101016671363437
 }
 TexturedBackground {
-  texture "dawn_cloudy_empty"
+  texture "noon_stormy_empty"
 }
 TexturedBackgroundLight {
 }

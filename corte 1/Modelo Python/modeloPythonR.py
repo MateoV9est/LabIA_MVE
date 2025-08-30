@@ -67,7 +67,7 @@ class SquarePendulum:
         # v_base: velocidad de la base (m/s) 
         # theta: ángulo del brazo respecto a la vertical (rad) - 0 = hacia arriba
         # omega: velocidad angular del brazo (rad/s)
-        self.state = np.array([0.0, 0.0, np.pi + 0.05, 0.0])  # Pequeña perturbación desde arriba
+        self.state = np.array([0.0, 0.0, np.pi *0, 0.0])  # Pequeña perturbación desde arriba
         
         #######################################################
         # CONFIGURACIÓN VISUAL

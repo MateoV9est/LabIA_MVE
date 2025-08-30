@@ -52,6 +52,11 @@ class SquarePendulum:
         self.Kp = 45.0   # Proporcional
         self.Ki = 2.0    # Integral
         self.Kd = 8.0    # Derivativo
+
+        #Para mejorar el rendimiento:
+            #Si oscila mucho: ↑ Kd (más amortiguamiento)
+            #Si es lento: ↑ Kp (más agresivo)
+            #Si tiene offset: ↑ Ki (mejor corrección de errores residuales)
         
         # Variables del PID
         self.error_integral = 0.0
@@ -85,7 +90,7 @@ class SquarePendulum:
         #######################################################
         
         # [x_base, v_base, theta, omega]
-        self.state = np.array([0.0, 0.0, np.pi + 0.05, 0.0])  # Pequeña perturbación
+        self.state = np.array([0.0, 0.0, np.pi + 0.05, 0.0])  # Pequeña perturbación  y angulo inicial
         
         #######################################################
         # CONFIGURACIÓN VISUAL
@@ -296,7 +301,7 @@ class SquarePendulum:
         position_error = self.position_setpoint - current_position
         combined_error = angle_error + 0.1 * position_error  # Ponderación
         
-        # Término integral con anti-windup
+        # Término integral con anti-windup      # Evita que el término integral crezca sin control
         self.error_integral += combined_error * self.dt
         self.error_integral = np.clip(self.error_integral, -self.integral_windup_limit, self.integral_windup_limit)
         
@@ -309,7 +314,7 @@ class SquarePendulum:
                      self.Ki * self.error_integral + 
                      self.Kd * error_derivative)
         
-        # Limitar salida
+        # Limitar salida            # La fuerza máxima está limitada a 25N
         pid_output = np.clip(pid_output, -self.pid_max_force, self.pid_max_force)
         
         self.pid_output = pid_output
