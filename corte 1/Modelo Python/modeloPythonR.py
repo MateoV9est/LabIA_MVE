@@ -417,14 +417,14 @@ class SquarePendulum:
             "• Δ = Denominador común = M + m - m·cos²(θ)"
         )
         
-        ax_math.text(0.5, 9.0, variables_text, 
+        ax_math.text(0.1, 9.0, variables_text, 
                     transform=ax_math.transData,
                     fontsize=11, color='#34495e',
                     bbox=dict(boxstyle='round,pad=0.5', facecolor='#ecf0f1', alpha=0.8),
                     verticalalignment='top')
         
         # Título de ecuaciones no lineales
-        ax_math.text(5.0, 7.5, 'ECUACIONES NO LINEALES DEL SISTEMA:', 
+        ax_math.text(10.5, 7.5, 'ECUACIONES NO LINEALES DEL SISTEMA:', 
                     fontsize=14, fontweight='bold', color='#e74c3c',
                     horizontalalignment='center')
         
@@ -437,7 +437,7 @@ class SquarePendulum:
             "donde: Δ = M + m - m·cos²(θ)"
         )
         
-        ax_math.text(0.5, 6.0, eq1_text,
+        ax_math.text(8.5, 6.0, eq1_text,
                     fontsize=10, fontfamily='monospace', color='#2c3e50',
                     bbox=dict(boxstyle='round,pad=0.5', facecolor='#fff5f5', alpha=0.9),
                     verticalalignment='top')
@@ -455,13 +455,13 @@ class SquarePendulum:
             "                           L"
         )
         
-        ax_math.text(5.5, 6.0, eq2_text,
+        ax_math.text(8.5,3.0, eq2_text,
                     fontsize=10, fontfamily='monospace', color='#2c3e50',
                     bbox=dict(boxstyle='round,pad=0.5', facecolor='#f5f5ff', alpha=0.9),
                     verticalalignment='top')
         
         # Título de función de transferencia
-        ax_math.text(5.0, 3.5, 'FUNCIÓN DE TRANSFERENCIA (Sistema Linealizado):', 
+        ax_math.text(0.5, 3.5, 'FUNCIÓN DE TRANSFERENCIA (Sistema Linealizado):', 
                     fontsize=14, fontweight='bold', color='#27ae60',
                     horizontalalignment='center')
         
@@ -485,28 +485,11 @@ class SquarePendulum:
             "• s₄ ≈ +3.57 → Polo inestable ⚠️"
         )
         
-        ax_math.text(5.0, 2.8, transfer_text,
+        ax_math.text(0.5, 2.8, transfer_text,
                     fontsize=10, fontfamily='monospace', color='#2c3e50',
                     bbox=dict(boxstyle='round,pad=0.7', facecolor='#f0fff0', alpha=0.9),
                     verticalalignment='top', horizontalalignment='center')
         
-        # Interpretación física
-        interpretation_text = (
-            "🔍 INTERPRETACIÓN FÍSICA:\n\n"
-            "⚠️ SISTEMA INTRÍNSECAMENTE INESTABLE\n"
-            "El polo positivo (+3.57) indica que sin control activo,\n"
-            "cualquier perturbación hará que el péndulo se aleje\n"
-            "exponencialmente del equilibrio vertical.\n\n"
-            "🎯 ESTRATEGIA DE CONTROL:\n"
-            "Para estabilizar el sistema, la base debe moverse\n"
-            "continuamente para contrarrestar las perturbaciones\n"
-            "y mantener el brazo en posición vertical."
-        )
-        
-        ax_math.text(0.5, 2.0, interpretation_text,
-                    fontsize=10, color='#8b4513', fontweight='bold',
-                    bbox=dict(boxstyle='round,pad=0.5', facecolor='#fffacd', alpha=0.9),
-                    verticalalignment='top')
         
         plt.tight_layout()
         plt.show()
